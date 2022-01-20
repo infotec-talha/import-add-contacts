@@ -1,9 +1,9 @@
 <html lang="en">
 
-
+@include('includes.header')
 
 <body>
-    @include('includes.header')
+    
     <header class="header-dark">
         <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
             <div class="container"><a class="navbar-brand" href="index.html">CollectPokemon</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -23,7 +23,7 @@
     </header>
     <section class="register-photo" style="background: url('PokemonWallpaper2.png');background-size: cover;">
         <div class="form-container" style="width: 400px;">
-            <form method="post" style="background: rgb(30,40,51);opacity: 0.90;">
+            <form method="post" style="background: rgb(30,40,51);opacity: 0.90;" action="{{route('signUpPage')}}">
                 <h2 class="text-center" style="color: rgb(255,255,255);"><strong>Create</strong> an account.</h2>
                 <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" /></div>
                 <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password" /></div>

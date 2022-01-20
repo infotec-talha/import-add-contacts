@@ -1,14 +1,11 @@
+
 <html lang="en">
-<head>
-    <meta charset="">
-    <title>@yield("title")</title>
-    <link rel="stylesheet" href="{{URL::to("src/css/main.css")}}">
-    @yield("styles")
-</head>
-<body>
 @include('includes.header')
-<div class="main">
-@yield("content")
-</div>
+<body> 
+   @include('includes.topMenu')
+    <section class="login-dark" style="background: url('Toxtricity.jpg') left / cover no-repeat;">
+        @yield('page_content')
+    </section>
+    <script src="{{'js/bootstrap.min.js'}}"></script>
 </body>
 </html>

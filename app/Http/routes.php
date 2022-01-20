@@ -41,20 +41,12 @@ Route::post('/benice', function (\Illuminate\Http\Request $request){
 })->name('benice');
 });
 
-Route::get('/pokemon', function () {
-    return view('actions.pokemon');
-})->name('pokemon');
-
-Route::get('/signup-poke', function () {
-    return view('actions.signup-poke');
-})->name('signup-poke');
-
-Route::get('/poke_pass_rest', function () {
-    return view('actions.poke_pass_rest');
-})->name('poke_pass_rest');
+Route::get('/pokemon', 'PokemonController@getLoginPage')->name('getLoginPage');
 
 Route::post('/pokemon','PokemonController@authenticate')->name('authenticate');
 
-Route::post('/poke_pass_rest','PokePassController@reset_password')->name('reset_password');
+Route::get('/poke_pass_rest','PokemonController@resetPasswordPage')->name('resetPasswordPage');
+
+Route::get('/signup-poke','PokemonController@signUpPage')->name('signUpPage');
 
 

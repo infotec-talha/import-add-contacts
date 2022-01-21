@@ -25,3 +25,7 @@ Route::post('/poke_pass_rest','PokemonController@resetPassword')->name('resetPas
 
 Route::post('/signup-poke','PokemonController@signUp')->name('signUp');
 
+Route::get('/pokemon_index','PokemonController@getIndexPage')->name('getIndexPage');
+
+Route::get('/pokeCollection','PokemonController@getCollectionPage')->name('getCollectionPage');
+

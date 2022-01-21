@@ -6,6 +6,6 @@
             <div class="illustration" style="background: url('PikachuTransparent.png') center / contain no-repeat;height: 240px;"></div>
             <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" /></div>
             <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password" /></div>
-            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Log In</button></div><a class="forgot" href="{{URL::to('/poke_pass_rest')}}" style="color: rgb(255,255,255);">Forgot your email or password?</a>
+            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Log In</button></div><a class="forgot" href="{{route('resetPasswordPage')}}" style="color: rgb(255,255,255);">reset password?</a>
         </form>
 @endsection

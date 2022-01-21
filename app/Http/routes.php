@@ -11,7 +11,35 @@
 |
 */
 
+Route::get('/', function () {
+    return view('home');
+})->name('home');
 
+Route::group(['prefix' => 'do'], function (){
+    
+Route::get('/greet', function () {
+    return view('actions.greet');
+})->name('greet');
+
+Route::get('/hug', function () {
+    return view('actions.hug');
+})->name('hug');
+
+Route::get('/kiss', function () {
+    return view('actions.kiss');
+})->name('kiss');
+
+Route::post('/benice', function (\Illuminate\Http\Request $request){
+    if(isset($request['action']) && $request['name']){
+        if(strlen($request['name'])> 0)
+        {
+            return view('actions.nice',['action' => $request['action'],'name' => $request['name']]);
+        }
+        return redirect()->back();
+    }
+    return redirect()->back();
+})->name('benice');
+});
 
 Route::get('/pokemon', 'PokemonController@getLoginPage')->name('getLoginPage');
 
@@ -21,7 +49,4 @@ Route::get('/poke_pass_rest','PokemonController@resetPasswordPage')->name('reset
 
 Route::get('/signup-poke','PokemonController@signUpPage')->name('signUpPage');
 
-Route::post('/poke_pass_rest','PokemonController@resetPassword')->name('resetPassword');
-
-Route::post('/signup-poke','PokemonController@signUp')->name('signUp');
 

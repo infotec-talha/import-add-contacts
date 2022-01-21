@@ -10,7 +10,7 @@
                     </ul>
                     <form class="me-auto" target="_self">
                         <div class="d-flex align-items-center"><label class="form-label d-flex mb-0" for="search-field"><i class="fa fa-search"></i></label><input id="search-field" class="form-control search-field" type="search" name="search" /></div>
-                    </form><span class="navbar-text"><a class="login" href>Log In</a></span><a class="btn btn-light action-button" role="button" href="{{URL::to('/signup-poke')}}" style="background: #cec909;">Sign Up</a>
+                    </form><span class="navbar-text"><a class="login" href>Log In</a></span><a class="btn btn-light action-button" role="button" href="{{route('signUpPage')}}" style="background: #cec909;">Sign Up</a>
                 </div>
             </div>
         </nav>
